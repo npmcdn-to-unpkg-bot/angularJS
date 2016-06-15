@@ -1,0 +1,26 @@
+<div class='jumbotron'>
+    <h3>Contatos</h3>
+    <ui-alert title="problema" message="error">
+    </ui-alert>
+
+    <table class='table'>
+        <tr>
+            <th></th>
+            <th><a href="" ng-click="ordenarPor('nome')">Pessoa</a></th>
+            <th><a href="" ng-click="ordenarPor('idade')">Idade</a></th>
+        </tr>
+
+        <tr ng-class="{'hidden': !hide, 'selecionado': pessoa.selecionado}" ng-repeat="pessoa in pessoas track by $index">
+            <td> <input type='checkbox' ng-model='pessoa.selecionado'/></td>
+            <td>{{pessoa.nome | nome}}</td>
+            <td>{{pessoa.idade}}</td>
+            <td>{{pessoa.profissao.nome}}</td>
+        </tr>
+    </table>
+    <a class="btn btn-primary btn-block" href="#/criarContato">Novo contato</a>
+    <a class="btn btn-primary btn-block" href="#/criarProfissao">Nova profissao</a>
+
+
+    <button class='btn btn-primary btn-block' ng-click="hide = !hide">Mostrar a lista</button>
+    <button class='btn btn-danger btn-block' ng-click='apagarPessoa(pessoas)'>Apagar contatos</button>
+</div>

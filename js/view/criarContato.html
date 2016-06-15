@@ -1,0 +1,13 @@
+<div class='jumbotron'>
+    <form name="pessoaForm">
+            <!--<input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="Filtrar a lista por">-->
+            <input class='form-control' type='text' placeholder="Qual seu nome ?" ng-model='pessoa.nome' ng-required="true"></select>
+            <input class='form-control' type='text' placeholder="Qual sua idade ?" ng-model='pessoa.idade' ng-required="true"></select>
+            <select class='form-control' ng-model='pessoa.profissao' ng-options='profissao.nome for profissao in profissoes' ng-required="true">
+                <option value="">profissoes</option>
+            </select>
+        </form>
+
+        <button class='btn btn-primary btn-block' ng-click='inserirPessoa(pessoa)' ng-disabled='pessoaForm.$invalid'>Adicionar pessoa a lista</button>
+        <button class='btn btn-primary btn-block' ng-click='inserirProfissao(pessoa.profissao)' ng-disabled='pessoaForm.$invalid'>Adicionar profissao</button>
+</div>

@@ -1,0 +1,7 @@
+<div class='jumbotron'>
+    <form name="profissaoForm">
+            <input class='form-control' type='text' placeholder="Qual a profissao ?" ng-model='profissao.nome' ng-required="true"></select>
+    </form>
+        <button class='btn btn-primary btn-block' ng-click='inserirProfissao(profissao)' ng-disabled='profissaoForm.$invalid'>Adicionar profissao</button>
+        <a href="#/contatos" class="btn btn-primary btn-lock">Voltar pra contatos</a>
+</div>
